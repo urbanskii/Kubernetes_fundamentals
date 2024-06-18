@@ -18,3 +18,37 @@ app-html-deployment-5c55dfb74b-wcxnf   0/1     ContainerCreating   0          8s
 app-html-deployment-5c55dfb74b-x98vc   0/1     ContainerCreating   0          7s
 orion@rb:~/Documents/app-1-kubernetes$ 
 
+
+
+
+======DEPLOYMENT EXPOSE ================
+
+kubectl expose deployment app-html-deployment --type=LoadBalancer --name=app-html --port=80
+
+orion@rb:~/Documents/app-1-kubernetes$ kubectl get service
+NAME         TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+app-html     LoadBalancer   x.x.x.x           <pending>     80:30523/TCP   22s
+kubernetes   ClusterIP      10.96.0.1        <none>        443/TCP        22h
+
+
+minikube service --url app-html
+
+orion@rb:~/Documents/app-1-kubernetes$ minikube service --url app-html
+http://192.168.59.103:30523
+It works!
+
+
+Qual como é utilizado para excluir um pod com o nome de app-html?
+kubectl delete pod app-html
+
+Comando utilizar para visualizar os Pods em execução em um cluster Kubernetes?
+kubectl get pod
+
+Qual comando pode ser utilizar para o expor um deployment com o nome de app-html no formato de load balancer utilizando a porta 80?
+kubectl expose deployment app-html --type=LoadBalancer --name app-html --port=80
+
+Qual comando é utilizando para implementar um pod a partir de um arquivo YAML com o nome de pods.yml?
+kubectl apply -f pode.yml
+
+
+
