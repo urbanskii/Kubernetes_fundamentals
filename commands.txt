@@ -1,0 +1,20 @@
+
+===PARA ESCALAR DEPLOYMENT=====
+
+kubectl scale deployment app-html-deployment --replicas=10
+orion@rb:~/Documents/app-1-kubernetes$ kubectl scale deployment app-html-deployment --replicas=10
+deployment.apps/app-html-deployment scaled
+orion@rb:~/Documents/app-1-kubernetes$ kubectl get pods
+NAME                                   READY   STATUS              RESTARTS   AGE
+app-html-deployment-5c55dfb74b-4x87b   0/1     ContainerCreating   0          8s
+app-html-deployment-5c55dfb74b-d76l4   0/1     ContainerCreating   0          8s
+app-html-deployment-5c55dfb74b-hjxql   0/1     ContainerCreating   0          8s
+app-html-deployment-5c55dfb74b-l4q8v   0/1     ContainerCreating   0          8s
+app-html-deployment-5c55dfb74b-n5kv8   1/1     Running             0          16h
+app-html-deployment-5c55dfb74b-p9grd   1/1     Running             0          16h
+app-html-deployment-5c55dfb74b-swlx5   1/1     Running             0          16h
+app-html-deployment-5c55dfb74b-tdz2l   0/1     ContainerCreating   0          8s
+app-html-deployment-5c55dfb74b-wcxnf   0/1     ContainerCreating   0          8s
+app-html-deployment-5c55dfb74b-x98vc   0/1     ContainerCreating   0          7s
+orion@rb:~/Documents/app-1-kubernetes$ 
+
